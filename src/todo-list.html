@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<style>
+    .line {
+    text-decoration: line-through;
+}
+</style>
+<body class="bg-dark">
+    <div class="container">
+
+        <header class="p-4 mb-4 bg-primary rounded-3 text-light" style="text-align: center;">
+            <h1>Minha tarefas</h1>
+            <span id="quantidadeTarefa">Você tem um total de 0 tarefas pendentes.</span>
+        </header>
+
+        <form>
+            <div class="row">
+
+                <div class="col">
+                    <input required type="text" placeholder="Digite uma tarefa" class="form-control" id="tarefaValue">
+                </div>
+
+                <div class="col-md-2">
+                    <button id="button" type="button" class="btn btn-primary">Adicionar Tarefa</button>
+                </div>
+
+                <div class="col-md-2">
+                    <select class="form-control" id="filtro">
+                        <option value="todas">Todas Tarefas</option>
+                        <option value="pendentes">Todas Pendentes</option>
+                        <option value="finalizadas">Todas Finalizadas</option>
+                    </select>
+                </div>
+        </form>
+
+    </div>
+    <ul class="list-group mt-4" id="ulLista">
+        
+    </ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
