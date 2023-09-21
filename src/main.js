@@ -37,6 +37,7 @@ function filtroSelect() {
     })
 }
 
+// Pega o valor do input e cria a lista
 function criaLista() {
     const nomeTarefa = document.getElementById('tarefaValue').value
     estado.tarefas.push({ nome: nomeTarefa, finalizada: false })
@@ -49,6 +50,7 @@ function criaLista() {
  
 }
 
+// Verifica se o botão está checado ou não.
 function verificaCheck(){
     const todosCheckbox = document.getElementsByClassName('checkbox')
     const todasLabel = document.getElementsByClassName('labelText')
@@ -66,6 +68,7 @@ function verificaCheck(){
     }
 }
 
+// Ver quantas tarefas não estão finalizadas e adiciona no contador.
 function contadorTarefasPendentes(){
     const spanContador = document.getElementById('quantidadeTarefa')
     const tarefaFiltrada = filtraNaoFinalizada()
@@ -73,6 +76,7 @@ function contadorTarefasPendentes(){
 
 }
 
+// Filtra as tarefas que não estão finalizadas.
 function filtraNaoFinalizada(){
     return estado.tarefas.filter(tarefa => !tarefa.finalizada)
 }
